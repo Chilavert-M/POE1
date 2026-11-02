@@ -1,0 +1,524 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* The main page setting */
+
+body {
+    font-family: Arial, sans-serif;
+    background: black;
+}
+
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url("../images/Background.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    padding-bottom: 80px;
+}
+
+
+/* The navigation bar */
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 40px;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* The logo */
+
+.icon {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+
+.logo {
+    color: darkred;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* The navigation menu */
+
+.menu {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.menu ul {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    list-style: none;
+}
+
+
+.menu ul li {
+    list-style: none;
+}
+
+
+.menu ul li a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+
+/* Navigation underline */
+
+.menu ul li a::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 2px;
+
+    background: darkred;
+
+    left: 0;
+
+    bottom: -7px;
+
+    transition: 0.3s ease;
+}
+
+
+/* Navigation hover */
+
+.menu ul li a:hover {
+    color: darkred;
+}
+
+
+.menu ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* The search bar */
+
+.search {
+    width: 250px;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+.srch {
+    width: 170px;
+
+    height: 40px;
+
+    background: transparent;
+
+    border: 1px solid darkred;
+
+    border-right: none;
+
+    color: white;
+
+    padding: 10px;
+
+    font-family: Arial, sans-serif;
+
+    outline: none;
+
+    border-radius: 5px 0 0 5px;
+}
+
+
+.srch::placeholder {
+    color: white;
+}
+
+
+.btn {
+    width: 80px;
+
+    height: 40px;
+
+    background: darkred;
+
+    border: 1px solid darkred;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    border-radius: 0 5px 5px 0;
+
+    transition: 0.3s ease;
+}
+
+
+.btn:hover {
+    background: white;
+
+    color: darkred;
+}
+
+
+/* The main content */
+
+.content {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 80px auto 0;
+
+    color: white;
+
+    text-align: left;
+}
+
+
+.content h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 50px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+
+.content h1 span {
+    color: darkred;
+
+    font-size: 60px;
+}
+
+
+.content .par {
+    max-width: 700px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+
+    letter-spacing: 1px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+/* The button functions */
+
+.cn {
+    display: inline-block;
+
+    background: darkred;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 28px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+
+    cursor: pointer;
+}
+
+
+.cn:hover {
+    background: white;
+
+    color: darkred;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+/* featured wines */
+
+.featured {
+    margin-top: 70px;
+
+    max-width: 850px;
+}
+
+
+.featured > h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 40px;
+
+    color: darkred;
+
+    margin-bottom: 35px;
+}
+
+
+.wine {
+    margin-bottom: 30px;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    border-left: 4px solid darkred;
+
+    border-radius: 5px;
+
+    transition: 0.4s ease;
+}
+
+
+.wine:hover {
+    transform: translateX(8px);
+
+    background: rgba(0, 0, 0, 0.65);
+
+    border-left: 6px solid darkred;
+}
+
+
+.wine h3 {
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+
+.wine p {
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+.wine strong {
+    color: #dddddd;
+}
+
+
+/*The footer*/
+
+footer {
+    width: 100%;
+
+
+    color: white;
+
+    text-align: center;
+
+    margin-top: 0;
+
+    padding: 30px 20px;
+
+    border-top: 3px solid darkred;
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.8;
+}
+
+
+footer p {
+    margin: 0;
+
+    color: white(240, 235, 235);
+}
+
+
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+
+    .icon {
+        width: auto;
+
+        text-align: center;
+    }
+
+
+    .menu ul {
+        flex-wrap: wrap;
+
+        gap: 20px;
+
+        justify-content: center;
+    }
+
+
+    .search {
+        width: 250px;
+    }
+
+
+    .content {
+        margin-top: 50px;
+
+        text-align: center;
+    }
+
+
+    .content h1 {
+        font-size: 38px;
+    }
+
+
+    .content h1 span {
+        font-size: 42px;
+    }
+
+
+    .content .par {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .featured {
+        margin-left: auto;
+
+        margin-right: auto;
+
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .content h1 {
+        font-size: 32px;
+    }
+
+
+    .content h1 span {
+        font-size: 36px;
+    }
+
+
+    .menu ul {
+        gap: 12px;
+    }
+
+
+    .menu ul li a {
+        font-size: 12px;
+    }
+
+
+    .search {
+        width: 230px;
+    }
+
+
+    .srch {
+        width: 150px;
+    }
+
+
+    .btn {
+        width: 80px;
+    }
+
+
+    .featured {
+        text-align: left;
+    }
+
+
+    footer {
+        padding: 25px 15px;
+
+        font-size: 14px;
+    }
+}

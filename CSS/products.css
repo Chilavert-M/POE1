@@ -1,0 +1,550 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: black;
+}
+
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url("../images/grey.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    padding-bottom: 80px;
+}
+
+
+
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    backdrop-filter: blur(8px);
+}
+
+
+.icon {
+    width: 180px;
+    flex-shrink: 0;
+}
+
+
+.logo {
+    color: darkred;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+
+.menu {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.menu ul {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    list-style: none;
+}
+
+
+.menu ul li a {
+    text-decoration: none;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+
+    position: relative;
+}
+
+
+/* Underline animation */
+
+.menu ul li a::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 2px;
+
+    background: darkred;
+
+    left: 0;
+
+    bottom: -7px;
+
+    transition: 0.3s ease;
+}
+
+
+.menu ul li a:hover {
+    color: darkred;
+}
+
+
+.menu ul li a:hover::after {
+    width: 100%;
+}
+
+
+.search {
+    width: 250px;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+.srch {
+    width: 170px;
+
+    height: 40px;
+
+    padding: 10px;
+
+    color: white;
+
+    background: transparent;
+
+    border: 1px solid darkred;
+
+    border-right: none;
+
+    outline: none;
+
+    border-radius: 5px 0 0 5px;
+}
+
+
+.srch::placeholder {
+    color: white;
+}
+
+
+.btn {
+    width: 80px;
+
+    height: 40px;
+
+    color: white;
+
+    background: darkred;
+
+    border: 1px solid darkred;
+
+    border-radius: 0 5px 5px 0;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+
+.btn:hover {
+    background: white;
+
+    color: darkred;
+}
+
+
+.content {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 60px auto;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+.content h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 48px;
+
+    margin-bottom: 20px;
+
+    color: white;
+}
+
+
+.intro {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+}
+
+
+
+
+.wine-card {
+    background: rgba(0, 0, 0, 0.45);
+
+    padding: 35px;
+
+    margin-bottom: 50px;
+
+    border-radius: 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    text-align: left;
+
+    transition: 0.4s ease;
+
+    animation: fadeIn 1s ease;
+}
+
+
+.wine-card:hover {
+    transform: translateY(-8px);
+
+    background: rgba(0, 0, 0, 0.65);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.wine-card h2 {
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 27px;
+
+    margin-bottom: 25px;
+}
+
+
+
+.wine-flex-container {
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    margin-bottom: 30px;
+}
+
+
+.wine-flex-container img {
+    width: 260px;
+
+    height: 320px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 3px solid white;
+
+    flex-shrink: 0;
+
+    transition: 0.5s ease;
+}
+
+
+.wine-flex-container img:hover {
+    transform: scale(1.05);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+.wine-details {
+    flex: 1;
+}
+
+
+.wine-details p {
+    font-size: 16px;
+
+    line-height: 2;
+
+    color: white;
+}
+
+
+.wine-details strong {
+    color: darkred;
+}
+
+
+
+.wine-card > p {
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+
+    color: white;
+}
+
+
+
+.text-color h3 {
+    color: darkred;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+
+    margin-top: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+
+
+footer {
+    text-align: center;
+
+    margin-top: 50px;
+
+    padding: 20px;
+
+    color: white;
+
+    border-top: 1px solid rgb(253, 251, 251);
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.7;
+}
+
+
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+
+    .menu ul {
+        gap: 20px;
+    }
+
+
+    .search {
+        width: 220px;
+    }
+
+
+    .srch {
+        width: 140px;
+    }
+
+
+    .btn {
+        width: 80px;
+    }
+
+}
+
+
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+
+    .icon {
+        width: auto;
+    }
+
+
+    .menu ul {
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+
+    .search {
+        width: 250px;
+    }
+
+
+    .srch {
+        width: 170px;
+    }
+
+
+    .content h1 {
+        font-size: 36px;
+    }
+
+
+    .wine-flex-container {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .wine-flex-container img {
+        width: 220px;
+
+        height: 280px;
+
+        margin: 0 auto;
+    }
+
+
+    .wine-details {
+        width: 100%;
+    }
+
+
+    .wine-card {
+        padding: 25px;
+    }
+
+}
+
+
+
+@media (max-width: 500px) {
+
+    .menu ul {
+        gap: 12px;
+    }
+
+
+    .menu ul li a {
+        font-size: 12px;
+    }
+
+
+    .content {
+        width: 94%;
+    }
+
+
+    .content h1 {
+        font-size: 30px;
+    }
+
+
+    .wine-card h2 {
+        font-size: 23px;
+    }
+
+
+    .wine-flex-container img {
+        width: 190px;
+
+        height: 250px;
+    }
+
+
+    .search {
+        width: 220px;
+    }
+
+
+    .srch {
+        width: 150px;
+    }
+
+
+    .btn {
+        width: 70px;
+    }
+
+}

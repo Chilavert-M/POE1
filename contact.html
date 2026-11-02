@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Central Wines | Send Us a Message</title>
+    <meta
+      name="description"
+      content="Contact Central Wines with a question, feedback or partnership idea. Fill in the form and send your message by email."
+    />
+    <link rel="stylesheet" href="CSS/contact.css" />
+    <link rel="stylesheet" href="CSS/forms.css" />
+    <script src="JavaScript/javascriptContact.js" defer></script>
+
+    <style></style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <div class="icon">
+          <h2 class="logo">Central Wines</h2>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">HomePage</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="products.html">Products / Services</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="search">
+          <input class="srch" type="search" placeholder="Search..." />
+          <button class="btn">Search</button>
+        </div>
+      </div>
+
+      <div class="content">
+        <h1>Contact Us</h1>
+
+        <p class="intro">
+          Have a question or some feedback? Fill in the form and your email app
+          will open with the message ready to send to Central Wines. For wine
+          prices and availability, use the
+          <a href="enquiry.html">enquiry form</a>.
+        </p>
+
+        <form
+          id="contactForm"
+          class="site-form"
+          action="mailto:centralwines@gmail.com"
+          method="post"
+          enctype="text/plain"
+          novalidate
+        >
+          <label for="cname">Full name</label>
+          <input
+            type="text"
+            id="cname"
+            name="cname"
+            required
+            minlength="2"
+            maxlength="50"
+            autocomplete="name"
+          />
+
+          <label for="cemail">Email address</label>
+          <input
+            type="email"
+            id="cemail"
+            name="cemail"
+            required
+            autocomplete="email"
+          />
+
+          <label for="cphone">Phone number (10 digits, e.g. 0677804673)</label>
+          <input
+            type="tel"
+            id="cphone"
+            name="cphone"
+            required
+            pattern="0[0-9]{9}"
+            title="Enter a 10-digit number starting with 0, with no spaces"
+            autocomplete="tel"
+          />
+
+          <label for="ctype">Type of message</label>
+          <select id="ctype" name="ctype" required>
+            <option value="">-- Select a type --</option>
+            <option value="General question">General question</option>
+            <option value="Feedback">Feedback</option>
+            <option value="Complaint">Complaint</option>
+            <option value="Partnership or sponsorship">
+              Partnership or sponsorship
+            </option>
+          </select>
+
+          <label for="cmsg">Your message (10 to 1000 characters)</label>
+          <textarea
+            id="cmsg"
+            name="cmsg"
+            rows="6"
+            required
+            minlength="10"
+            maxlength="1000"
+          ></textarea>
+
+          <button type="submit" class="form-btn">Create email</button>
+        </form>
+
+        <div
+          id="contactResponse"
+          class="form-response"
+          aria-live="polite"
+        ></div>
+
+        <!-- MAP SECTION -->
+        <div class="map-section">
+          <h2>MAP</h2>
+
+          <div class="map-container">
+            <img
+              src="Images/wine-map-800.jpg"
+              srcset="
+                images/wine-map-800.jpg 400w,
+                images/wine-map-800.jpg 800w
+              "
+              sizes="(max-width: 500px) 190pvw, (max-width: 800px) 220px, 260px"
+              width="800"
+              height="1000"
+              loading="lazy"
+              alt="Central Wines Location Map"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Central Wines <br />
+        Quality - Passion - Tradition <br />
+        <a href="index.html">Home</a> | <a href="aboutus.html">About Us</a> |
+        <a href="products.html">Our Wines</a> |
+        <a href="enquiry.html">Enquiry</a> |
+        <a href="contact.html">Contact</a>
+        <br />
+        <br />
+        Email: centralwines@gmail.com <br />
+        Phone: 067 780 4673 <br />
+        Location: South Africa <br />
+        <br />
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Instagram</a
+        >
+        |
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Facebook</a
+        >
+        <br />
+        <br />
+        &copy; Central Wines. All Rights Reserved
+      </p>
+    </footer>
+  </body>
+</html>
